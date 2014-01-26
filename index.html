@@ -37,16 +37,17 @@
 <p>Yes, that's right: you've reached the home of one incredibly awesome build tool.  Only problem is, it doesn't exist yet.  Yeah .. I'm working on that.</p>
 
 <p>In the meantime, feast your eyes on this (entirely hypothetical) scenario:</p>
-<pre><code>$ iq start
+<pre><code style="font-family:monospace;">$ iq start
     build daemon started for user 'fred' (/home/fred/.iq)
 $ cd myproject
 $ iq include .
     watching module defined at /home/fred/myproject/module.iq
 $ echo "// just a comment" >> src/java/org/example/MyProject.java
 $ iq tail 
-   [fs] file changed: /home/fred/myproject/src/java/org/example/MyProject.java
-   [javac] -- compiling /home/fred/myproject/src/java/org/example/MyProject.java
-   [jar] -- updating /home/fred/myproject/myproject.jar
+      [fs] something happened /home/fred/myproject/src/java/org/example/MyProject.java
+   [javac] compiling /home/fred/myproject/src/java/org/example/MyProject.java
+     [jar] updating /home/fred/myproject/myproject.jar
+  [launch] restarting: java -jar /home/fred/myproject/myproject.jar
 </code></pre>
 
 <!--
